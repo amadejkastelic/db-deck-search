@@ -25,7 +25,7 @@ def scrape(url, out_file):
     driver.get(url)
     time.sleep(0.2)
     for entry in driver.get_log('browser'):
-        if card_name in entry['message']:
+        if card_name.lower() in entry.get('message', '').lower():
             out_file.write('{} - {}\n'.format(datetime.datetime.now(), url))
 
 url = 'https://www.duelingbook.com/deck?id={}'
