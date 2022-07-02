@@ -21,3 +21,9 @@ make scrape
 ```bash
 make review
 ```
+
+# Obtaining the last deck id
+- Navigate to https://duelingbook.com/
+- Navigate to `Deck Constructor` and create a new empty deck
+- Click the `Export Deck` button and select `Download Link`
+- Copy the id query param from url
