@@ -1,5 +1,9 @@
+import logging
+import os
 import time
+
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
@@ -19,8 +23,14 @@ def review(driver, url):
 
 with open(input("Enter output file path of scraper.py: ")) as in_file:
     for url in in_file:
+        if not url:
+            continue
         driver = webdriver.Chrome(
             service=Service(ChromeDriverManager().install()), 
             desired_capabilities=capabilities,
         )
-        review(driver, url.split(' - ')[1])
+        if '-' in url:
+            print('Deck name: {}'.format(url.split(' - ')[1]))
+            review(driver, url.split(' - ')[-1])
+        else:
+            review(driver, url)
