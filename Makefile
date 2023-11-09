@@ -1,13 +1,10 @@
 SHELL := /bin/bash
 
-virtualenv:
-	virtualenv -p python3 dbscraper
-
-deps:
-	pip install selenium webdriver-manager
-
 scrape:
-	python3 scraper.py
+	pipenv run python scraper.py
 
 review:
-	python3 parser.py
+	pipenv run python deck_parser.py
+
+replay-finder:
+	pipenv run python replay_finder.py

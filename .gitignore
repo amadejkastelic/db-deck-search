@@ -1,3 +1,6 @@
-*.out
-*.txt
-dbscraper
+out/
+*.log
+.DS_Store
+.vscode/
+**/__pycache__
+overrides.py

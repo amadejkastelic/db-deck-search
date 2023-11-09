@@ -1,17 +1,19 @@
 # DB-Deck-Search
 
 ## Prerequisites
-- Python3
+- Python3.11
+- Pipenv
+- Google Chrome
 
 ## How to use
 - Clone the repository
-- Create the virtual environment
+- Create the virtual environment and install dependencies
 ```bash
-make virtualenv
+pipenv install
 ```
-- Install dependencies
+- Use virtual environment
 ```bash
-make deps
+pipenv shell
 ```
 - Run scraper
 ```bash
