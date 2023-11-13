@@ -3,7 +3,7 @@
 ## Prerequisites
 - Python3.11
 - Pipenv
-- Google Chrome
+- Google Chrome / Chromium
 
 ## How to use
 - Clone the repository
